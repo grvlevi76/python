@@ -11,11 +11,11 @@ m = eval(input("enter the m list elements : "))  #we can take all elements of li
 print("m list elements : ",m)
 print("n and m  list type : ",type(n),type(m))
 
-
+#<======================== list ==========================>
 #<======================== tuple ==========================>
-#tuple is sequences of homogenous objects 
-#or in lame language tuple is collection of same data type value
-#weird but haterogenous elements taken as input through eval(input()) makes list a tuple
+#tuple is same as list except tuples r immutable
+#elements taken as input through eval(input()) makes list a tuple
+#<======================== Dictionary ==========================>
 
 #<========================= conditional statement ========================>
 

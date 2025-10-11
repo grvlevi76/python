@@ -1,6 +1,6 @@
 #<========================== list (linked list with array indexing lol) ====================>
 
-#list basically stores sequences of individual haterogeneous object 
+#list basically stores sequences of individual haterogeneous object and list r mutable
 #preserves insertion order
 #duplicate objects r allowed
 #list is dynamic so we can increase or decrease size of it as we want  
@@ -42,7 +42,7 @@ print("y[3] = ",y[3])
 y[1] = 5         #replace value at specific index with another value
 print("x and y list type : ",type(x),type(y))
 #4
-x = eval(input("enter list x elements : "))   #can take whole list elements as input from user in one go, just seperate each elements with comma
+x = list(eval(input("enter list x elements : ")))   #can take whole list elements as input from user in one go, just seperate each elements with comma
 print("x list elments : ",x)
 print("x and y list type : ",type(x),type(y))
 
@@ -75,7 +75,10 @@ print("y list size :",len(y))
 #4 - x.extend(y)
 order1 = ["aloo","began"]
 order2 = ["loki"]
-order = order1.extend(order2)
+order1.extend(order2)
+print("extended order1 : ",order1)
+
+order = order1+order2   #returns new added list
 print("extended order : ",order)
 #5 - z.remove('p') - removes the element 'p'
 #6 - z.pop(1) - removes the value at index 1
