@@ -79,7 +79,7 @@ order1.extend(order2)
 print("extended order1 : ",order1)
 
 order = order1+order2   #returns new added list
-print("extended order : ",order)
+print("extended order using '+' : ",order)
 #5 - z.remove('p') - removes the element 'p'
 #6 - z.pop(1) - removes the value at index 1
 

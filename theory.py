@@ -19,6 +19,21 @@ print("n and m  list type : ",type(n),type(m))
 
 #<========================= conditional statement ========================>
 
+#ternary conditional statement
+age = 5
+isadult =True if age>18 else False
+print("\nisadult :",isadult)
+
+#math-case statement
+x = 2
+match x:
+    case 1:
+        print("one")
+    case 2 |3:
+        print("two or three")
+    case _:
+        print("other number")
+
 #<========================= loops ========================>
 
 print("\nloops--->")
@@ -38,6 +53,10 @@ else:                        # 'else' just after 'for loop' is used to check  if
 
 print("outside loop i = ",i)
 
+#pass  ------>>>> 
+for i in range(5):
+    pass         #pass statement is used to write empty loops
+print("last element :",i)
 
 #<-------------questions-------->
 #eval(input()) converts the variable or list into 'tuple' if multiple elements r taken as input
