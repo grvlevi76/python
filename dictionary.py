@@ -1,6 +1,6 @@
 #<======================== Dictionaries ==========================>
 
-#dictionaries r type of data structure where data r stored in key-value pair within curly {} breacket
+#dictionaries r type of data structure where data r stored in key-value pair within curly {} breacket with collon showing relation netween key and value
 #same as hashmaping
 #duplicate key r not allowed , if written then its value will overwrite previous one
 #keys must be immutable like integer,string, tuple not list
@@ -65,3 +65,11 @@ for val in math_marks.values():
 print("math_marks dict elements :")
 for item in math_marks.items():
     print(item)
+
+#<=================== different functions =========================>
+#1 - setdefault(key,value)
+    #return key's corresponding value if key exist in dictionary
+    #if key i snot available then adds the key value in dictionary as new entry
+
+#2- keys(),values(),items()
+#3 - update() - adds element of one dict to another

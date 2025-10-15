@@ -7,14 +7,14 @@ n =6; #declared variable
 
 #caste the input in whatever data type of value u want from user
 n = int(input("enter the number n : "))        #takes only one value as a input from user at a time
-m = eval(input("enter the m list elements : "))  #we can take all elements of list as input from user
+m = eval(input("enter the m list elements : "))  #wcan take elements of any collection data type by indicating their breacket
 print("m list elements : ",m)
 print("n and m  list type : ",type(n),type(m))
 
 #<======================== list ==========================>
 #<======================== tuple ==========================>
 #tuple is same as list except tuples r immutable
-#elements taken as input through eval(input()) makes list a tuple
+#elements with comma taken as input through eval(input()) without any breacket makes list a tuple
 #<======================== Dictionary ==========================>
 
 #<========================= conditional statement ========================>
@@ -58,7 +58,6 @@ for i in range(5):
     pass         #pass statement is used to write empty loops
 print("last element :",i)
 
-#<-------------questions-------->
-#eval(input()) converts the variable or list into 'tuple' if multiple elements r taken as input
-# how loops knows their scope when their's no curly breacket? how does it uses tab to recognise its scope
-#hint - loops,if-else they do not create scope
+#<------------- more for refrence -------->
+#1 - u can take all elements input for collection data types through eval(input()) by indicating their breacket
+#2 - indentation
