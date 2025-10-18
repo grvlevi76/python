@@ -1,0 +1,11 @@
+#<================= set ================>
+s = set([1,2,3])
+print(s)
+print(type(s))
+s.add(5)
+s.add(6)
+s.remove(6)
+print(s)
+print("elements at 2nd index : ",s[2])
+s.pop()
+print(s)

@@ -69,7 +69,7 @@ for item in math_marks.items():
 #<=================== different functions =========================>
 #1 - setdefault(key,value)
     #return key's corresponding value if key exist in dictionary
-    #if key i snot available then adds the key value in dictionary as new entry
+    #if key is not available then adds the key value in dictionary as new entry
 
 #2- keys(),values(),items()
 #3 - update() - adds element of one dict to another
