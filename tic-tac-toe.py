@@ -15,35 +15,41 @@ def main_struct():
     print("Note: rows and column digit can't be more than 2 and less than 0")
     print("game visual look but in matrix form --> ")
     ttt_visually(ttt)
-
     print()
+    
     while total_attempt>0 :
 
-        if total_attempt % 2 != 0 :       #odd number - player 1 attempt
+        #player 1 attempt - odd number
+        if total_attempt % 2 != 0 :       
             user = "player 1"
             print("player 1 enter row and column for x(exp - 2,1): ",end='')
 
-            while True:                   #to check if user entered position is right or not
-                usr_input = eval(input())
-                if ttt[usr_input[0]][usr_input[1]] != None:
-                    print(ttt[usr_input[0]][usr_input[1]], "already exist at this position!! try other positions: ",end='')
-                else:
-                    break
-
-            ttt[usr_input[0]][usr_input[1]] = 'x'
-
-        else:                             #even num - player 2 attempt
+        else:         #player 2 attempt - even number         
             user = "player 2"
             print("player 2 enter row and column for 0(exp - 1,1): ",end='')
 
-            while True:                     #to check if user entered position is right or not
-                usr_input = eval(input())
-                if ttt[usr_input[0]][usr_input[1]] != None:
-                    print(ttt[usr_input[0]][usr_input[1]], "already exist at this position!! try other positions: ",end='')
-                else:
-                    break
+        while True:    # to check user entered row and column is valid or not
 
-            ttt[usr_input[0]][usr_input[1]] = 'o'
+            usr_input = input()
+            usr_input = list(usr_input)
+            row= int(usr_input[0])
+            column= int(usr_input[2])
+            if row<0 or row>2 or column<0 or column>2:
+                print("invalid out of bound input!")
+                print("rows and column digit can't be more than 2 and less than 0! enter position again: ",end='')
+
+            elif ttt[row][column] != None:
+                print(ttt[row][column], "already exist at this position!! try other positions: ",end='')
+
+            else:
+
+                if(user =='player 1'):
+                    ttt[row][column] = 'x'
+                else:
+                    ttt[row][column] = 'o'
+
+                break
+
 
         ttt_visually(ttt)               # to see tic-tac-toe visually but in matrix form
 
@@ -72,11 +78,21 @@ def win_or_not(ttt):
 
 def ttt_visually(ttt):
     
+    print()
     for i in range(3):
         for j in range(3):
-            print(ttt[i][j],"\t",end='')
+            if ttt[i][j]!=None:
+                print(ttt[i][j],end='')
+            else:
+                print("_",end='')
 
+            if(j!=2):
+                print(" | ",end='')
+            
         print()
+    print()
+
+
 
 ch = None
 while(True):
@@ -99,7 +115,3 @@ while(True):
 
         case _:
             print("invalid input!!")
-
-#two error remaining -
-    #if user entered row and column digit is more than 2 or less then 0
-    #ttt line based visual interface
