@@ -85,4 +85,4 @@ print("extended order using '+' : ",order)
 
 #learned today ->
 #list creation through list(ranger(a,b,i)), funfact - tuple created through eval(input()) can get casted to list through list(eval(input()))
-#types of lists , funfact - eval(input()) creates a tuple not list if no. of elements taken as input r more than 1 else type will be 'int'
+#types of lists , funfact - eval(input()) creates a tuple not list if no. of elements taken as input r more than 1 and without any breacket else type will be 'int'
