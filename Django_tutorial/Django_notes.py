@@ -20,3 +20,46 @@
 
 
 #                        <===== first Django app - part 2 ======>
+
+#db setup ==> migrations -->
+'''
+The migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables 
+according to the database settings in your mysite/settings.py file and the database migrations shipped 
+with the app (we’ll cover those later).
+
+migrations r derived from ur models file
+'''
+#creating models ==>
+
+#models = table name of database
+#field = attribute(column) of database
+
+'''
+models r basically single definitive source of information about ur data.
+It contains the essential fields and behaviors of the data you’re storing.
+'''
+#these classes(models inside of models.py) r nothing but just the table name with variables inside of classs as attribute(columns) of database with their datatype
+
+#activating models ==>
+'''
+"python manage.py makemigrations polls" to create migrations for those changes
+"python manage.py migrate" to apply those changes to the database.
+
+->'makemigration' stores the changes u made in ur models , u can checkout- 
+those changes in 'migrations' folder.
+
+"python manage.py sqlmigrate polls 0001" - sqlmigrate command tell u sql command its going to use-
+ to create or update models from the code in 'migrations/' folder
+
+"python manage.py check" - checks for any problems in ur project without migrating or touching the db
+
+->'migrate' command takes all the migrations that haven’t been applied and runs them against your database-
+
+->'django_migrations' named table in ur db.sqlite3 tells the 'migrate' command which 'migrations' r applied-
+in ur databse already with their publish data. u can check them out in sqlite db
+
+->'migrations' folder also sort of tells all the changes or commits history u did in database
+
+'''
+
+#lol basically the migrate command just makes db tables based on settings(db type) and models(columns of table)
