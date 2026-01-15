@@ -131,6 +131,12 @@ It contains the essential fields and behaviors of the data you’re storing.
 # testing for later--> do choice_set on Student model ,see if it wors cause there's no forien key in Student table
 
 
+
+#                        <===== first Django app - part 3 ======>
+
+
+
+
 #                      <============== misc ==============>
 
 # views ======>

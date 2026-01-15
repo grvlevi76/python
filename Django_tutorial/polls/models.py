@@ -2,7 +2,7 @@ import datetime
 from django.db import models
 from django.utils import timezone
 
-# Create your models here. -> edited by me
+# Create your models here. -> edited by me 
 
 class Question(models.Model):    #question is module
     question_text = models.CharField(max_length=200)
